@@ -1,15 +1,12 @@
-R2PM_BEGIN
-
-R2PM_GIT "https://github.com/wargio/r2dec-js"
-R2PM_DESC "[r2-r2pipe-node] an Experimental Decompiler"
-BINDIR="${R2PM_BINDIR}"
-
-R2PM_INSTALL() {
-	make -C p || exit 1
+{
+"name": "r2dec",
+"type": "git",
+"repo": "https://github.com/wargio/r2dec-js",
+"desc": "[r2-r2pipe-node] an Experimental Decompiler",
+"install": [
+  "make -C p"
+],
+"uninstall": [
+  "make -C p uninstall"
+]
 }
-
-R2PM_UNINSTALL() {
-	make -C p uninstall || exit 1
-}
-
-R2PM_END
